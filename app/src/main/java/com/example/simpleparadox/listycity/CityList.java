@@ -32,5 +32,24 @@ public class CityList {
         Collections.sort(list);
         return list;
     }
+    /**
+     * This removes a city from the list
+     * @param city
+     *      This is a candidate city to remove
+     */
+    public void deletion(City city) {
+        if (!cities.contains(city)) {
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+    }
+
+    /**
+     * This function counts the no of cities
+     * @return
+     *      list size
+     */
+
+    public int count(){ return cities.size(); }
 
 }
